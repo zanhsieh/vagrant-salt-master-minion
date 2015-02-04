@@ -13,7 +13,7 @@ if [ ! -f "/var/salt_minion_setup" ]; then
   chkconfig salt-minion on
   sed -i 's|#master: salt|#master: salt\nmaster: 192.168.40.11|' /etc/salt/minion
   service salt-minion start
-  sed -i 's|^other_args=$|other_args="--insecure-registry master:5000"|' /etc/sysconfig/docker
+  #sed -i 's|^other_args=$|other_args="--insecure-registry master:5000"|' /etc/sysconfig/docker
   service docker restart
   touch /var/salt_minion_setup
 fi

@@ -13,7 +13,7 @@ if [ ! -f "/var/salt_master_setup" ]; then
   chkconfig salt-master on
   sed -i 's|#interface: 0.0.0.0|#interface: 0.0.0.0\ninterface: 192.168.40.11|' /etc/salt/master
   service salt-master start
-  sed -i 's|^other_args=$|other_args="--insecure-registry master:5000"|' /etc/sysconfig/docker
+  #sed -i 's|^other_args=$|other_args="--insecure-registry master:5000"|' /etc/sysconfig/docker
   service docker restart
   touch /var/salt_master_setup
 fi
