@@ -1,5 +1,5 @@
 FROM centos:centos6
-MAINTAINER Ming Hsieh zanhsieh@gmail.com
+MAINTAINER Ming Hsieh <zanhsieh@gmail.com>
 
 # Do Salt install stuff and squeeze in a master.conf snippet that tells the minion
 # to contact the master specified.
